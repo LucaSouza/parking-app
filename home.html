@@ -1,0 +1,17 @@
+<template name="home">
+	<main>
+		<div class="park_list">
+			{{#each park_list}}
+					<fieldset>
+						<legend>{{info.city}}</legend>
+						<strong>{{info.name}}</strong>
+						<a href="/parkinfo/{{_id}}">link</a>
+					</fieldset>
+			{{/each}}
+		</div>
+	</main>
+	<footer>
+		{{> menu}}
+	</footer>
+</template>
+

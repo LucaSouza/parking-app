@@ -1,0 +1,74 @@
+/* CSS declarations go here */
+
+[type="button"],.button, button{
+	border: solid 1px black;
+	border-radius: 6px;
+}
+
+fieldset{
+	border: solid 1px black;
+	width: 98.0%;
+	padding: 0.6%;
+	display: table;
+}
+
+input[type='text']{
+	border-bottom: solid 1px;
+	border-radius: 1rem 1rem 0px 1rem;
+}
+
+.next{
+	/*put here arrow right*/
+}
+
+.menu{
+	/*put here menu icons*/
+}
+
+.point_using,.point_no_using{
+	display: block;
+	width: 16px;
+	height: 16px;
+	border-radius: 8px;
+}
+.point_using{
+	background: green;
+}
+.point_no_using{
+	background: yellow;
+}
+
+header input{
+	float: left;
+}
+
+.find{
+	float: left;
+	border-radius: 0 1rem 1rem 0px;
+}
+
+header, main, footer{
+	position: fixed;
+}
+
+header,footer{
+	background: green;
+	height: 10.5%;
+	left: 0px;
+}
+
+header{
+	top: 0px;
+}
+
+footer{
+	bottom: 0px;
+}
+
+main{
+	height: 79%;
+	background: red;
+	top: 10.5%;
+	overflow: auto;
+	padding: 0.4%;
+}

@@ -1,0 +1,127 @@
+<template name='myinfo'>
+	<main>
+	<div class='my_info body'>
+		{{#each _myinfo}}
+			<table border=1>
+				<tr>
+					<th colspan=2>ID: {{_id}}</th>
+				</tr>
+				<tr>
+					<td>Nome</td>
+					<td>{{info.name}}</td>
+				</tr>
+				<tr>
+					<td>CNPJ</td>
+					<td>{{cnpj}}</td>
+				</tr>
+				<tr>
+					<td>Cidade</td>
+					<td>{{info.city}}</td>
+				</tr>
+				<tr>
+					<td>Endereço</td>
+					<td>{{info.address}}</td>
+				</tr>
+				<tr>
+					<td>Bairro</td>
+					<td>{{info.zone}}</td>
+				</tr>
+				<tr>
+					<td>Numero</td>
+					<td>{{info.number}}</td>
+				</tr>
+				<tr>
+					<td>Telefone</td>
+					<td>{{info.phone}}</td>
+				</tr>
+				<tr>
+					<td>Preço</td>
+					<td>{{info.value}}</td>
+				</tr>
+				<tr>
+					<td>Vagas</td>
+					<td>{{info.flows}}</td>
+				</tr>
+				<tr>
+					<td>Vagas Disponiveis</td>
+					<td>{{info.flows_avali}}</td>
+				</tr>
+			</table>
+		{{/each}}
+	</div>
+	</main>
+	{{> menu}}
+</template>
+
+<template name='listbike'>
+	<main>
+	<div class='list_bike body'>
+		<!--<button type='button' class='select button'>{{select_caption}}</button>-->
+		<table border=1>
+			<tr>
+				<th>Cliente</th>
+				<th>Telefone</th>
+				<th>Idade</th>
+				<th>Piso</th>
+				<th></th>
+			</tr>
+		{{#each list_bike}}
+			<tr>
+				<td>{{name}}</td>
+				<td>{{phone}}</td>
+				<td>{{yold}}</td>
+				<td>{{flow}}</td>
+				<td><span class="{{stat}}"></span></td>
+			</tr>
+		{{/each}}
+		</table>
+	</div>
+	</main>
+	{{> menu}}
+</template>
+
+<template name='regbike'>
+	<main>
+	<span class='error'>{{error}}</span>
+	<div class='reg_bike body'>
+		<form method="POST" class='form_reg' action='/regbike'>
+			<input type='text' name='cli_cpf' placeholder='CPF' required>
+			<input type='text' name='bike_color' placeholder='Cor da bicicleta' required>
+			<input type='text' name='model' placeholder='Modelo da bicicleta'>
+			<select name='space_avaliable' required>
+				<option value=''>---Piso---</option>
+				{{#each sp_aval}}
+					<option value='{{number}}'>Piso {{number}}</option>
+				{{/each}}
+			</select>
+			<input type='submit' value="Registrar">
+		</form>
+	</div>
+	</main>
+	{{> menu}}
+</template>
+
+<template name='retbike'>
+	<main>
+	<span class='error'>{{error}}</span>
+	<div class='ret_bike body'>
+		<form class='form_ret' action='/retbike'>
+			<input type='text' name='cli_cpf' placeholder='CPF' required>
+			<button type='submit' class='button next'>o_-</button>
+			{{#each cli_info}}
+				<label>Cliente: {{name}}</label>
+				<label>Cor da bicicleta: {{color}}</label>
+				<label>Modelo da bicicleta: {{model}}</label>
+				<label>Tempo: {{time}}</label>
+				<label>Valor por hora: {{value}}</label>
+				<label>valor total: {{cli_value}}</label>
+				<label>Piso: {{flow}}</label>
+				<input type='text' class='money' name='money' placeholder='Valor pago'>
+				<label>Troco: {{money_ret}}</label>
+				<button type='submit' class="submit button">Confirmar</button>
+			{{/each}}
+		</form>
+	</div>
+	</main>
+	{{> menu}}
+</template>

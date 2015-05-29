@@ -1,0 +1,32 @@
+<template name="menu">
+	<footer>
+		<button type='button' class="menu_log box">*_*</button>
+		{{#if _menu}}
+			<div class='menu'>
+			{{#each menu_list}}
+				<span class="menu_item">{{item}}</span>
+			{{/each}}
+			</div>
+		{{/if}}
+	</footer>
+</template>
+
+<template name='header'>
+	<header>
+		{{#if is_client}}
+			<div class="search_bar header">
+				{{#if _cli_login}}
+					<button type='button' class='button logout'>T_T</button>
+				{{/if}}
+				<form method="GET" action="/">
+					<input type="text" name="city_search" placeholder="Cidade">
+					<button type="submit" class="box find">-_-</button>
+				</form>
+			</div>
+		{{else}}
+			<div class="header">
+				<a href='/' alt='Logo'>------</a>
+			</div>
+		{{/if}}
+	</header>
+</template>

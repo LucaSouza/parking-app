@@ -1,0 +1,12 @@
+<template name="login">
+	<main>
+		<form class="login" method="POST" action="/">
+			<input type="text" name="cnpj_cpf" placeholder="CPF/CNPJ-VR" required>
+			<input type="password" name="pass" placeholder="Senha" required>
+			<input type="submit" value="logar" class="button">
+		</form>
+		<span class="error">{{log_err}}</span>
+	</main>
+	{{> menu}}
+</template>
+

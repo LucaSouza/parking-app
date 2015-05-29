@@ -1,0 +1,71 @@
+<template name='mybike'>
+	<main>
+		<span class='error'>{{error}}</span>
+		<div class='my_bike'>
+			<table border=1>
+				<tr>
+					<td>Estacionamento</td>
+					<td>{{name}}</td>
+				</tr>
+				<tr>
+					<td>Cidade</td>
+					<td>{{city}}</td>
+				</tr>
+				<tr>
+					<td>Endereço</td>
+					<td>{{address}} {{number}}</td>
+				</tr>
+				<tr>
+					<td>Bairro</td>
+					<td>{{zone}}</td>
+				</tr>
+				<tr>
+					<td>Tempo</td>
+					<td>{{time}}</td>
+				</tr>
+				<tr>
+					<td>Valor</td>
+					<td>{{value}}</td>
+				</tr>
+			</table>
+		</div>
+	</main>
+	{{> menu}}
+</template>
+
+<template name='clientinfo'>
+	<main>
+		<span class='error'>{{error}}</span>
+		<div class='client_info'>
+			<table border=1>
+				<tr>
+					<td>Nome</td>
+					<td>{{name}}</td>
+				</tr>
+				<tr>
+					<td>CPF</td>
+					<td>{{cpf}}</td>
+				</tr>
+				<tr>
+					<td>Telefone</td>
+					<td>{{phone}}</td>
+				</tr>
+				<tr>
+					<td>Idade</td>
+					<td>{{yold}}</td>
+				</tr>
+			</table>
+		</div>
+	</main>
+	{{> menu}}
+</template>
+
+<template name='reserv'>
+	<main>
+		<div class='reserv'>
+			<form class='f_reserv'>
+			</form>
+		</div>
+	</main>
+	{{> menu}}
+</template>

@@ -1,0 +1,91 @@
+<template name="bikeinfo">
+	<main>
+		<div class="bike_info">
+			{{#each data}}
+				{{> biketable}}
+			{{/each}}
+		</div>
+	</main>
+	{{> menu}}
+</template>
+
+<template name="biketable">
+	<table class="bike_table" border='1'>
+		<tr>
+			<td colspan="3">Ficha do Cliente: {{name}}</td>
+		</tr>
+		<tr>
+			<td>Idade</td>
+			<td colspan='2'>{{yold}}</td>
+		</tr>
+		<tr>
+			<td>Telefone</td>
+			<td colspan='2'>{{phone}}</td>
+		</tr>
+		<tr>
+			<td colspan="3">Bike</td>
+		</tr>
+		<tr>
+			<td>Cor</td>
+			<td colspan='2'>{{bike_color}}</td>
+		</tr>
+		<tr>
+			<td>Modelo</td>
+			<td colspan='2'>{{bike_model}}</td>
+		</tr>
+		<tr>
+			<td>Depositada</td>
+			<td>{{bike_dep}}</td>
+			<td>{{bike_dep_city}}</td>
+		</tr>
+		<tr>
+			<td>Tempo</td>
+			<td colspan='2'>{{tmp}}</td>
+		</tr>
+		<tr>
+			<td>Valor</td>
+			<td colspan='2'>{{park_val}}</td>
+		</tr>
+	</table>
+</template>
+
+<template name="parkinfo">
+	<main>
+		<div class="park_info">
+			{{> parktable}}
+		</div>
+	</main>
+	{{> menu}}
+</template>
+
+<template name="parktable">
+	<table class="park_table" border=1>
+		<tr>
+			<td colspan="2">{{info.name}}</td>
+		</tr>
+		<tr>
+			<td>Cidade</td>
+			<td>{{info.city}}</td>
+		</tr>
+		<tr>
+			<td>Endereço</td>
+			<td>{{info.address}}</td>
+		</tr>
+		<tr>
+			<td>Bairro</td>
+			<td>{{info.zone}}</td>
+		</tr>
+		<tr>
+			<td>Numero</td>
+			<td>{{info.number}}</td>
+		</tr>
+		<tr>
+			<td>Telefone</td>
+			<td>{{info.phone}}</td>
+		</tr>
+		<tr>
+			<td>Valor por hora</td>
+			<td>{{info.value}}</td>
+		</tr>
+	</table>
+</template>
